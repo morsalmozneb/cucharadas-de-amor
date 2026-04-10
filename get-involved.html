@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved — Cucharadas de Amor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://use.typekit.net/wid4pwn.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- PayPal Sandbox SDK — Replace YOUR_SANDBOX_CLIENT_ID with your actual sandbox client ID from developer.paypal.com -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_SANDBOX_CLIENT_ID&currency=USD&intent=capture" data-sdk-integration-source="button-factory"></script>
+</head>
+<body class="page-get-involved">
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo-color.svg" alt="Cucharadas de Amor" />
+      </a>
+      <div class="nav-links-group">
+        <div class="nav-pill" id="navPill">
+          <a href="about.html">About Us</a>
+          <a href="programs.html">Impact &amp; Programs</a>
+          <a href="get-involved.html" class="active">Get Involved</a>
+        </div>
+        <a href="donate.html" class="btn-donate">Donate Now</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="about.html">About Us</a>
+      <a href="programs.html">Impact &amp; Programs</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="donate.html" class="nav-mobile-donate">Donate Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="get-hero">
+    <div class="get-hero-copy">
+      <h1>Be Part of the Change — Volunteer,<br>Donate, Transform Lives.</h1>
+    </div>
+  </section>
+
+  <!-- VOLUNTEERING INTRO -->
+  <section class="get-volunteering-section">
+    <div class="container">
+      <div class="get-volunteering-copy">
+        <p class="section-label">Volunteering</p>
+        <h2 class="section-title">Make a Difference Through Service</h2>
+        <p>Volunteering at Cucharadas de Amor is a meaningful opportunity to be part of a community effort that transforms lives through service, empathy, and social commitment. Every volunteer brings their time, talent, and heart to create a supportive learning environment for children and families.</p>
+        <p>We believe that everyone can contribute through their unique skills, creativity, and willingness to help.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPES OF VOLUNTEERING -->
+  <section class="get-types-section">
+    <div class="container">
+      <div class="center get-types-header">
+        <p class="section-label">Types of Volunteering</p>
+      </div>
+      <div class="get-types-grid">
+        <div class="get-type-card">
+          <img src="assets/majesticons_pinwheel.svg" alt="Daily Activities" width="34" height="34" class="get-type-icon get-type-icon-yellow" />
+          <h3>Daily Activities</h3>
+          <p>Support the center's daily operations: accompany children, assist with educational activities, organize materials, prepare spaces, and help with workshops.</p>
+        </div>
+        <div class="get-type-card">
+          <img src="assets/majesticons_ferris-wheel.svg" alt="Special Events" width="34" height="34" class="get-type-icon get-type-icon-red" />
+          <h3>Special Events</h3>
+          <p>Help plan and run community events, celebrations, campaigns, and recreational activities that strengthen community bonds.</p>
+        </div>
+        <div class="get-type-card">
+          <img src="assets/majesticons_rocket-3-start.svg" alt="Remote Volunteering" width="34" height="34" class="get-type-icon get-type-icon-blue" />
+          <h3>Remote Volunteering</h3>
+          <p>Contribute from home by creating materials, providing creative support, design help, or organizational development assistance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO CAN VOLUNTEER -->
+  <section class="get-eligibility-section">
+    <div class="container">
+      <div class="get-eligibility-box">
+        <p class="section-label">Who Can Volunteer</p>
+        <p>There is no strict minimum age. Children and teens are welcome when accompanied by a responsible adult. School groups can participate with teacher supervision. This makes volunteering a formative experience for younger generations, fostering values like solidarity, responsibility, and social commitment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE RESOURCES -->
+  <section class="get-donate-section">
+    <div class="container">
+      <img src="assets/majesticons_dollar-circle.svg" alt="" width="38" height="38" class="get-donate-icon" />
+      <p class="section-label">Donate Resources</p>
+      <p class="get-donate-copy">We accept donations of non-perishable foods, basic household products, cleaning supplies, and personal hygiene items. These contribute directly to the food baskets we distribute to families.</p>
+      <div class="get-donate-buttons">
+        <button class="btn btn-blue" onclick="openVolunteerForm()">Sign Up to Volunteer</button>
+        <button class="btn btn-green" onclick="openDonateSupplies()">Donate Supplies</button>
+        <a href="donate.html" class="btn btn-yellow">Donate Directly</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOLUNTEER SIGN UP FORM (hidden, shown on button click) -->
+  <section id="volunteerFormSection" style="display:none; background:var(--bg-light); padding:64px 0;">
+    <div class="container" style="max-width:600px;">
+      <h2 class="section-title" style="text-align:center;">Sign Up to Volunteer</h2>
+      <!-- Bug #6 Fix: volunteer form inputs have associated labels -->
+      <form id="volunteerForm" onsubmit="submitVolunteer(event)" style="margin-top:32px;">
+        <label for="volunteerName" style="display:block;font-weight:700;font-size:0.88rem;margin-bottom:4px;color:var(--text-dark);">Full Name <span style="color:var(--red);">*</span></label>
+        <input type="text" id="volunteerName" name="name" placeholder="Full Name" required style="width:100%; padding:13px 14px; border:1.5px solid var(--border); border-radius:var(--radius); font-family:'Nunito',sans-serif; margin-bottom:12px; font-size:0.95rem; outline:none;" />
+        <label for="volunteerEmail" style="display:block;font-weight:700;font-size:0.88rem;margin-bottom:4px;color:var(--text-dark);">Email Address <span style="color:var(--red);">*</span></label>
+        <input type="email" id="volunteerEmail" name="email" placeholder="Email Address" required style="width:100%; padding:13px 14px; border:1.5px solid var(--border); border-radius:var(--radius); font-family:'Nunito',sans-serif; margin-bottom:12px; font-size:0.95rem; outline:none;" />
+        <label for="volunteerPhone" style="display:block;font-weight:700;font-size:0.88rem;margin-bottom:4px;color:var(--text-dark);">Phone Number <span style="color:var(--text-light);font-weight:400;">(optional)</span></label>
+        <input type="tel" id="volunteerPhone" name="phone" placeholder="Phone Number" style="width:100%; padding:13px 14px; border:1.5px solid var(--border); border-radius:var(--radius); font-family:'Nunito',sans-serif; margin-bottom:12px; font-size:0.95rem; outline:none;" />
+        <label for="volunteerType" style="display:block;font-weight:700;font-size:0.88rem;margin-bottom:4px;color:var(--text-dark);">Volunteer Type</label>
+        <select id="volunteerType" name="type" style="width:100%; padding:13px 14px; border:1.5px solid var(--border); border-radius:var(--radius); font-family:'Nunito',sans-serif; margin-bottom:12px; font-size:0.95rem; outline:none; appearance:none; background:white;">
+          <option value="">Select volunteer type...</option>
+          <option value="daily">Daily Activities</option>
+          <option value="events">Special Events</option>
+          <option value="remote">Remote Volunteering</option>
+        </select>
+        <label for="volunteerMessage" style="display:block;font-weight:700;font-size:0.88rem;margin-bottom:4px;color:var(--text-dark);">Message <span style="color:var(--text-light);font-weight:400;">(optional)</span></label>
+        <textarea id="volunteerMessage" name="message" placeholder="Tell us about yourself and why you'd like to volunteer" rows="4" style="width:100%; padding:13px 14px; border:1.5px solid var(--border); border-radius:var(--radius); font-family:'Nunito',sans-serif; margin-bottom:16px; font-size:0.95rem; outline:none; resize:vertical;"></textarea>
+        <button type="submit" class="btn btn-blue" style="width:100%;">Submit Application</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html">
+          <img src="assets/frame30.svg" alt="Cucharadas de Amor" class="footer-home-logo" />
+        </a>
+      </div>
+      <div class="footer-contact">
+        <p>Contact us:</p>
+        <p><a href="mailto:cucharadas.de.amor@gmail.com">cucharadas.de.amor@gmail.com</a></p>
+        <p><a href="tel:7783316768">(778) 3316 7678</a></p>
+        <p>Del Carmen 209, Lomas de la Primavera,<br>45065 Zapopan, Jal., México</p>
+      </div>
+      <div class="footer-nav">
+        <a href="about.html">About Us</a>
+        <a href="programs.html">Impact &amp; Programs</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="donate.html">Donate Now</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS (Bug #6 Fix: all inputs have accessible labels) -->
+  <div class="modal-overlay" id="donateModal" role="dialog" aria-modal="true" aria-labelledby="donateModalTitle">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('donateModal')" aria-label="Close">&times;</button>
+      <div class="modal-icon"><img src="assets/majesticons_heart.svg" alt="" width="40" height="40" style="margin:0 auto;" /></div>
+      <h2 id="donateModalTitle">Complete Your Donation</h2>
+      <div class="toggle-row">
+        <button class="toggle-btn active" id="toggleMonthly" onclick="setDonationType('monthly')">Monthly</button>
+        <button class="toggle-btn" id="toggleOnetime" onclick="setDonationType('onetime')">One-time</button>
+      </div>
+      <div class="amount-grid">
+        <button class="amount-btn recommended" id="amt25" onclick="selectAmount(25, this)">$25<small>Recommended</small></button>
+        <button class="amount-btn" id="amt50" onclick="selectAmount(50, this)">$50</button>
+        <button class="amount-btn" id="amt100" onclick="selectAmount(100, this)">$100</button>
+      </div>
+      <div class="input-row"><span class="currency-prefix">$</span><label for="customAmount" class="sr-only">Custom amount</label><input type="number" id="customAmount" placeholder="Custom amount" min="1" oninput="clearAmountButtons()" /></div>
+      <div class="modal-section-header"><div class="header-icon"><img src="assets/majesticons_users.svg" alt="" width="20" height="20" /></div><h3>Personal Information</h3></div>
+      <label for="donorName" class="sr-only">Full Name</label>
+      <input type="text" id="donorName" placeholder="Full Name" style="margin-bottom:12px;" autocomplete="name" />
+      <label for="donorEmail" class="sr-only">Email Address</label>
+      <input type="email" id="donorEmail" placeholder="Email Address" style="margin-bottom:12px;" autocomplete="email" />
+      <div class="modal-section-header"><div class="header-icon"><img src="assets/majesticons_dollar-circle.svg" alt="" width="20" height="20" /></div><h3>Payment Details</h3></div>
+      <label for="cardNumber" class="sr-only">Card Number</label>
+      <input type="text" id="cardNumber" placeholder="Card Number" maxlength="19" style="margin-bottom:12px;" oninput="formatCardNumber(this)" autocomplete="cc-number" />
+      <div class="card-row">
+        <div><label for="cardExpiry" class="sr-only">Expiry Date</label><input type="text" id="cardExpiry" placeholder="MM / YY" maxlength="7" oninput="formatExpiry(this)" onkeydown="handleExpiryKeydown(this, event)" autocomplete="cc-exp" /></div>
+        <div><label for="cardCVC" class="sr-only">CVC</label><input type="text" id="cardCVC" placeholder="CVC" maxlength="3" autocomplete="cc-csc" /></div>
+        <div style="display:flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--text-light);">🔒 Secure</div>
+      </div>
+      <div class="divider" style="margin:18px 0 8px;">or pay with</div>
+      <div id="paypal-button-container"></div>
+      <button class="btn btn-blue" style="width:100%;margin-top:16px;" onclick="submitDonation()">Complete Donation</button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="sponsorModal" role="dialog" aria-modal="true" aria-labelledby="sponsorModalTitle">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('sponsorModal')" aria-label="Close">&times;</button>
+      <div class="modal-icon"><img src="assets/majesticons_heart.svg" alt="" width="48" height="48" style="margin:0 auto;" /></div>
+      <h2 id="sponsorModalTitle">Sponsor a Child</h2>
+      <p class="modal-subtitle">For $25/month, you can change a child's life through education, nourishment, and support.</p>
+      <div class="sponsor-perks">
+        <h4>Your sponsorship includes:</h4>
+        <div class="sponsor-perk-item"><span class="perk-icon">💡</span><p>Education support and school access</p></div>
+        <div class="sponsor-perk-item"><span class="perk-icon">💛</span><p>Daily meals and food security</p></div>
+        <div class="sponsor-perk-item"><span class="perk-icon">👤</span><p>Personal development and family support</p></div>
+      </div>
+      <div class="amount-option"><div class="check-icon">✓</div><div><div class="amount-text">$25/month</div><div class="amount-sub">Sponsor a Child</div></div><span class="recommended-badge">Recommended</span></div>
+      <div style="margin-top:20px;">
+        <label for="sponsorName" class="sr-only">Full Name</label>
+        <input type="text" id="sponsorName" placeholder="Full Name" style="margin-bottom:12px;" autocomplete="name" />
+        <label for="sponsorEmail" class="sr-only">Email Address</label>
+        <input type="email" id="sponsorEmail" placeholder="Email Address" style="margin-bottom:12px;" autocomplete="email" />
+        <label for="sponsorCard" class="sr-only">Card Number</label>
+        <input type="text" id="sponsorCard" placeholder="Card Number" maxlength="19" style="margin-bottom:12px;" oninput="formatCardNumber(this)" autocomplete="cc-number" />
+        <div class="card-row">
+          <div><label for="sponsorExpiry" class="sr-only">Expiry Date</label><input type="text" id="sponsorExpiry" placeholder="MM / YY" maxlength="7" oninput="formatExpiry(this)" onkeydown="handleExpiryKeydown(this, event)" autocomplete="cc-exp" /></div>
+          <div><label for="sponsorCVC" class="sr-only">CVC</label><input type="text" id="sponsorCVC" placeholder="CVC" maxlength="3" autocomplete="cc-csc" /></div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--text-light);">🔒 Secure</div>
+        </div>
+      </div>
+      <div class="divider" style="margin:16px 0 8px;">or pay with</div>
+      <div id="paypal-button-container-sponsor"></div>
+      <button class="btn btn-red" style="width:100%;margin-top:16px;" onclick="submitSponsor()">Sponsor a Child — $25/month</button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thankYouModal" role="dialog" aria-modal="true" aria-labelledby="thankYouTitle" aria-live="assertive">
+    <div class="modal modal-thankyou">
+      <button class="modal-close" onclick="closeModal('thankYouModal')" aria-label="Close">&times;</button>
+      <div class="modal-icon" style="margin-bottom:12px;"><img src="assets/logo-color.svg" alt="Cucharadas de Amor" width="80" height="80" style="margin:0 auto;" /></div>
+      <h2 id="thankYouTitle">Thank You for Your Support</h2>
+      <p>Your contribution is helping provide education, meals, and support to children and families in need.</p>
+      <div class="confirmation-note"><span>✉️</span>&nbsp; A confirmation has been sent to your email.</div>
+      <button class="btn btn-blue" style="width:100%;margin-top:20px;" onclick="closeModal('thankYouModal')">Return Home</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function openVolunteerForm() {
+      const section = document.getElementById('volunteerFormSection');
+      section.style.display = 'block';
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    function openDonateSupplies() {
+      alert('To donate supplies, please contact us at cucharadasdeamor@gmail.com or call (778) 333-7878. Thank you!');
+    }
+    function submitVolunteer(e) {
+      e.preventDefault();
+      document.getElementById('volunteerFormSection').style.display = 'none';
+      openModal('thankYouModal');
+    }
+  </script>
+</body>
+</html>

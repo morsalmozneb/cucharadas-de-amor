@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cucharadas de Amor — Transforming Lives Through Love, Education &amp; Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://use.typekit.net/wid4pwn.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- PayPal Sandbox SDK — Replace YOUR_SANDBOX_CLIENT_ID with your actual sandbox client ID from developer.paypal.com -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_SANDBOX_CLIENT_ID&currency=USD&intent=capture" data-sdk-integration-source="button-factory"></script>
+</head>
+<body class="page-home">
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo-color.svg" alt="Cucharadas de Amor" />
+      </a>
+      <div class="nav-links-group">
+        <div class="nav-pill" id="navPill">
+          <a href="about.html">About Us</a>
+          <a href="programs.html">Impact &amp; Programs</a>
+          <a href="get-involved.html">Get Involved</a>
+        </div>
+        <a href="donate.html" class="btn-donate">Donate Now</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="about.html">About Us</a>
+      <a href="programs.html">Impact &amp; Programs</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="donate.html" class="nav-mobile-donate">Donate Now</a>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero hero-home">
+    <div class="hero-overlay"></div>
+    <div class="hero-media-placeholder" aria-hidden="true">
+      <span>Video Placeholder</span>
+    </div>
+    <div class="hero-play-wrap">
+      <button class="hero-video-btn" aria-label="Play video">&#9654;</button>
+    </div>
+    <div class="hero-text-wrap">
+      <h1>A Spoonful of Love<br>Changes Everything</h1>
+    </div>
+  </section>
+
+  <!-- ======== WHY IT MATTERS ======== -->
+  <section class="section home-why-section">
+    <div class="container">
+      <div class="two-col home-why-grid">
+        <div class="home-why-copy">
+          <h2 class="section-title home-blue-title">Why It Matters</h2>
+          <p>In Mexico's public school system, children who are not enrolled on time can permanently lose their spot. In communities like Lomas de la Primavera, where extreme poverty makes timely enrollment nearly impossible, this means many children never attend school at all.</p>
+          <p>Without elementary school, there is no path to middle school, high school, or formal employment. The result is generational: adults in this community who missed their chance as children cannot read or write today. Their own children now face the same impossible odds.</p>
+          <p>Cucharadas de Amor breaks this cycle by giving children the education, protection, and support they need to build a different future.</p>
+        </div>
+        <div class="home-photo-placeholder" aria-hidden="true">
+          <span>Photo Placeholder</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== WHAT WE DO ======== -->
+  <section class="section what-we-do-section">
+    <div class="container">
+      <div class="center what-we-do-header">
+        <h2 class="section-title home-red-title">What We Do</h2>
+      </div>
+      <div class="three-col home-service-grid">
+        <div class="icon-card">
+          <div class="icon">
+            <img src="assets/majesticons_lightbulb-shine.svg" alt="Education" width="52" height="52" />
+          </div>
+          <h3>Education</h3>
+          <p>Academic support and schooling for children ages 7–13 who are behind or without access to school.</p>
+        </div>
+        <div class="icon-card">
+          <div class="icon">
+            <img src="assets/majesticons_hand-pointer-event.svg" alt="Personal Development" width="52" height="52" />
+          </div>
+          <h3>Personal Development</h3>
+          <p>Workshops on values, self-esteem, and parenting skills for the whole family.</p>
+        </div>
+        <div class="icon-card">
+          <div class="icon">
+            <img src="assets/majesticons_leaf-3-angled.svg" alt="Nutritional Support" width="52" height="52" />
+          </div>
+          <h3>Nutritional Support</h3>
+          <p>Daily meals for students and subsidized food baskets for families.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Circle sits at the bottom of the white section so the blue section hides its lower half -->
+    <div class="philosophy-circle-decor"></div>
+  </section>
+
+  <!-- ======== OUR PHILOSOPHY ======== -->
+  <section class="philosophy-section">
+    <div class="container">
+      <p class="section-label">Our Philosophy</p>
+      <blockquote>The most powerful thing we give isn't food. It's love.</blockquote>
+      <p>We've learned something after almost 30 years: What truly changes a child's life isn't only food, or education, or resources. It's knowing that someone loves them. That someone shows up. That they are worthy.</p>
+      <p style="margin-top:14px;">We've watched children walk through our doors carrying that weight and graduate standing in their own light.</p>
+      <p class="attribution" style="margin-top:16px;">— Cucharadas de Amor A.C.</p>
+    </div>
+  </section>
+
+  <!-- ======== OUR IMPACT ======== -->
+  <section class="section home-impact-section">
+    <div class="container">
+      <div class="impact-layout">
+        <div class="impact-sidebar-card">
+          <p class="section-label">Our Impact</p>
+          <h2 class="section-title">Love in Action</h2>
+          <p>Every number here is a child who got a second chance. None of this happens without you. Your donation changes lives.</p>
+          <p class="impact-inline-cta">Sponsor a Child — $25/month · Donate Now</p>
+          <button class="btn btn-red impact-donate-btn" onclick="openDonateModal()">Donate Now</button>
+        </div>
+        <div class="impact-stats-panel">
+          <div class="impact-stat-row">
+            <img src="assets/majesticons_users.svg" alt="" width="44" height="44" class="impact-stat-icon impact-stat-icon-yellow" />
+            <div class="impact-big-num">+ 457</div>
+            <div class="impact-big-label">Children supported</div>
+          </div>
+          <div class="stat-row-divider"></div>
+          <div class="impact-stat-row">
+            <img src="assets/majesticons_map-marker.svg" alt="" width="44" height="44" class="impact-stat-icon impact-stat-icon-red" />
+            <div class="impact-big-num">+ 1,378</div>
+            <div class="impact-big-label">Meals served monthly</div>
+          </div>
+          <div class="stat-row-divider"></div>
+          <div class="impact-stat-row">
+            <img src="assets/majesticons_puzzle.svg" alt="" width="44" height="44" class="impact-stat-icon impact-stat-icon-blue" />
+            <div class="impact-big-num">+ 208</div>
+            <div class="impact-big-label">Families strengthened.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TESTIMONIALS ======== -->
+  <section class="testimonials-section">
+    <div class="center testimonials-header">
+      <h2 class="section-title home-blue-title">Testimonials</h2>
+    </div>
+    <div class="testimonials-placeholder-row">
+      <div class="testimonial-placeholder testimonial-placeholder-side"><span>Testimonial Photo</span></div>
+      <div class="testimonial-placeholder testimonial-placeholder-main"><span>Testimonial Photo</span></div>
+      <div class="testimonial-placeholder testimonial-placeholder-side"><span>Testimonial Photo</span></div>
+    </div>
+  </section>
+
+  <!-- ======== SPONSOR CTA ======== -->
+  <section class="home-story-cta">
+    <div class="container">
+      <p class="home-story-cta-text">You can be part of this story. For just $25 a month, you can sponsor a child's education and help their family build a better future.</p>
+      <div class="btn-group home-story-cta-buttons">
+        <button class="btn btn-red" onclick="openSponsorModal()">Sponsor a Child</button>
+        <button class="btn btn-yellow" onclick="openDonateModal()">Donate Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== STAY CLOSE / INSTAGRAM ======== -->
+  <section class="stay-close-section">
+    <div class="container">
+      <div class="stay-close-layout">
+        <div class="stay-close-left">
+          <h2 class="stay-close-heading">Stay close to the mission</h2>
+          <p class="stay-close-sub">Follow our journey on Instagram</p>
+          <div class="stay-close-handle">
+            <div class="insta-icon">
+              <svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+            <span><em>Cucharadas.de.Amor</em></span>
+          </div>
+          <p class="stay-close-desc">Get stories, updates, and moments from Cucharadas de Amor straight to your inbox.</p>
+          <a href="#" class="stay-close-subscribe" onclick="return false;">Subscribe</a>
+        </div>
+        <div class="stay-close-grid">
+          <div class="stay-close-photo stay-close-photo-1"><span>Photo 1</span></div>
+          <div class="stay-close-photo stay-close-photo-2"><span>Photo 2</span></div>
+          <div class="stay-close-photo stay-close-photo-3"><span>Photo 3</span></div>
+          <div class="stay-close-photo stay-close-photo-4"><span>Photo 4</span></div>
+          <div class="stay-close-photo stay-close-photo-5"><span>Photo 5</span></div>
+          <div class="stay-close-photo stay-close-photo-6"><span>Photo 6</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-back-top">
+    <div class="container">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">← Back to Top</a>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html">
+          <img src="assets/frame30.svg" alt="Cucharadas de Amor" class="footer-home-logo" />
+        </a>
+      </div>
+      <div class="footer-contact">
+        <p>Contact us:</p>
+        <p><a href="mailto:cucharadas.de.amor@gmail.com">cucharadas.de.amor@gmail.com</a></p>
+        <p><a href="tel:7783316768">(778) 3316 7678</a></p>
+        <p>Del Carmen 209, Lomas de la Primavera,<br>45065 Zapopan, Jal., México</p>
+      </div>
+      <div class="footer-nav">
+        <a href="about.html">About Us</a>
+        <a href="programs.html">Impact &amp; Programs</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="donate.html">Donate Now</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======== DONATION MODAL ======== -->
+  <div class="modal-overlay" id="donateModal" role="dialog" aria-modal="true" aria-labelledby="donateModalTitle">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('donateModal')" aria-label="Close">&times;</button>
+      <div class="modal-icon">
+        <img src="assets/majesticons_heart.svg" alt="" width="40" height="40" style="margin:0 auto;" />
+      </div>
+      <h2 id="donateModalTitle">Complete Your Donation</h2>
+
+      <div class="modal-section-header">
+        <div class="header-icon"><img src="assets/majesticons_heart.svg" alt="" width="20" height="20" /></div>
+        <h3>Donation Amount</h3>
+      </div>
+
+      <div class="toggle-row">
+        <button class="toggle-btn active" id="toggleMonthly" onclick="setDonationType('monthly')">Monthly</button>
+        <button class="toggle-btn" id="toggleOnetime" onclick="setDonationType('onetime')">One-time</button>
+      </div>
+
+      <div class="amount-grid">
+        <button class="amount-btn recommended" id="amt25" onclick="selectAmount(25, this)">
+          $25<small>Recommended</small>
+        </button>
+        <button class="amount-btn" id="amt50" onclick="selectAmount(50, this)">$50</button>
+        <button class="amount-btn" id="amt100" onclick="selectAmount(100, this)">$100</button>
+      </div>
+
+      <div class="input-row">
+        <span class="currency-prefix">$</span>
+        <input type="number" id="customAmount" placeholder="Custom amount" min="1" oninput="clearAmountButtons()" />
+      </div>
+
+      <div class="modal-section-header">
+        <div class="header-icon"><img src="assets/majesticons_users.svg" alt="" width="20" height="20" /></div>
+        <h3>Personal Information</h3>
+      </div>
+      <label for="donorName" class="sr-only">Full Name</label>
+      <input type="text" id="donorName" placeholder="Full Name" style="margin-bottom:12px;" autocomplete="name" />
+      <label for="donorEmail" class="sr-only">Email Address</label>
+      <input type="email" id="donorEmail" placeholder="Email Address" style="margin-bottom:12px;" autocomplete="email" />
+
+      <div class="modal-section-header">
+        <div class="header-icon"><img src="assets/majesticons_dollar-circle.svg" alt="" width="20" height="20" /></div>
+        <h3>Payment Details</h3>
+      </div>
+      <label for="cardNumber" class="sr-only">Card Number</label>
+      <input type="text" id="cardNumber" placeholder="Card Number" maxlength="19" style="margin-bottom:12px;" oninput="formatCardNumber(this)" autocomplete="cc-number" />
+      <div class="card-row">
+        <div><label for="cardExpiry" class="sr-only">Expiry Date</label><input type="text" id="cardExpiry" placeholder="MM / YY" maxlength="7" oninput="formatExpiry(this)" autocomplete="cc-exp" /></div>
+        <div><label for="cardCVC" class="sr-only">CVC</label><input type="text" id="cardCVC" placeholder="CVC" maxlength="3" autocomplete="cc-csc" /></div>
+        <div style="display:flex; align-items:center; gap:4px; font-size:0.72rem; color:var(--text-light);">🔒 Secure</div>
+      </div>
+
+      <div class="divider" style="margin:18px 0 8px;">or pay with</div>
+      <div id="paypal-button-container"></div>
+
+      <button class="btn btn-blue" style="width:100%; margin-top:16px;" onclick="submitDonation()">
+        Complete Donation
+      </button>
+    </div>
+  </div>
+
+  <!-- ======== SPONSOR MODAL ======== -->
+  <div class="modal-overlay" id="sponsorModal" role="dialog" aria-modal="true" aria-labelledby="sponsorModalTitle">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('sponsorModal')" aria-label="Close">&times;</button>
+      <div class="modal-icon">
+        <img src="assets/majesticons_heart.svg" alt="" width="48" height="48" style="margin:0 auto;" />
+      </div>
+      <h2 id="sponsorModalTitle">Sponsor a Child</h2>
+      <p class="modal-subtitle">For $25/month, you can change a child's life through education, nourishment, and support.</p>
+
+      <div class="sponsor-perks">
+        <h4>Your sponsorship includes:</h4>
+        <div class="sponsor-perk-item">
+          <img src="assets/majesticons_lightbulb-shine.svg" class="perk-icon" alt="" width="24" height="24" />
+          <p>Education support and school access</p>
+        </div>
+        <div class="sponsor-perk-item">
+          <img src="assets/majesticons_dollar-circle.svg" class="perk-icon" alt="" width="24" height="24" />
+          <p>Daily meals and food security</p>
+        </div>
+        <div class="sponsor-perk-item">
+          <img src="assets/majesticons_users.svg" class="perk-icon" alt="" width="24" height="24" />
+          <p>Personal development and family support</p>
+        </div>
+      </div>
+
+      <h3 style="font-weight:800; margin-bottom:12px;">Sponsorship Amount</h3>
+      <div class="amount-option">
+        <div class="check-icon">✓</div>
+        <div>
+          <div class="amount-text">$25/month</div>
+          <div class="amount-sub">Sponsor a Child</div>
+        </div>
+        <span class="recommended-badge">Recommended</span>
+      </div>
+
+      <div style="margin-top:20px;">
+        <label for="sponsorName" class="sr-only">Full Name</label>
+        <input type="text" id="sponsorName" placeholder="Full Name" style="margin-bottom:12px;" autocomplete="name" />
+        <label for="sponsorEmail" class="sr-only">Email Address</label>
+        <input type="email" id="sponsorEmail" placeholder="Email Address" style="margin-bottom:12px;" autocomplete="email" />
+        <label for="sponsorCard" class="sr-only">Card Number</label>
+        <input type="text" id="sponsorCard" placeholder="Card Number" maxlength="19" style="margin-bottom:12px;" oninput="formatCardNumber(this)" autocomplete="cc-number" />
+        <div class="card-row">
+          <input type="text" placeholder="MM / YY" maxlength="7" oninput="formatExpiry(this)" autocomplete="cc-exp" />
+          <input type="text" placeholder="CVC" maxlength="3" autocomplete="cc-csc" />
+          <div style="display:flex; align-items:center; gap:4px; font-size:0.72rem; color:var(--text-light);">🔒 Secure</div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:16px 0 8px;">or pay with</div>
+      <div id="paypal-button-container-sponsor"></div>
+
+      <button class="btn btn-red" style="width:100%; margin-top:16px;" onclick="submitSponsor()">
+        Sponsor a Child — $25/month
+      </button>
+    </div>
+  </div>
+
+  <!-- ======== THANK YOU MODAL ======== -->
+  <div class="modal-overlay" id="thankYouModal" role="dialog" aria-modal="true" aria-labelledby="thankYouTitle" aria-live="assertive">
+    <div class="modal modal-thankyou">
+      <button class="modal-close" onclick="closeModal('thankYouModal')" aria-label="Close">&times;</button>
+      <div class="modal-icon" style="margin-bottom:12px;">
+        <img src="assets/logo-color.svg" alt="Cucharadas de Amor" width="80" height="80" style="margin:0 auto;" />
+      </div>
+      <h2 id="thankYouTitle">Thank You for Your Support</h2>
+      <p>Your contribution is helping provide education, meals, and support to children and families in need.</p>
+      <div class="confirmation-note" style="margin:20px 0;">
+        <span>✉️</span>&nbsp; A confirmation has been sent to your email.
+      </div>
+      <button class="btn btn-blue" style="width:100%;" onclick="closeModal('thankYouModal')">Return Home</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
