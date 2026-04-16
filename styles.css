@@ -2141,7 +2141,9 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(180deg, #e7e7e7 0%, #d8d8d8 100%);
+  background:
+    linear-gradient(90deg, rgba(10, 18, 28, 0.72), rgba(10, 18, 28, 0.42)),
+    url("assets/images/after-Cucharadas.jpg") center 42% / cover no-repeat;
   padding: 24px;
 }
 
@@ -2520,7 +2522,9 @@ footer {
 }
 
 .programs-hero {
-  background: #146ee4;
+  background:
+    linear-gradient(90deg, rgba(20, 110, 228, 0.9), rgba(20, 110, 228, 0.58)),
+    url("assets/images/elementary-classroom.jpg") center 44% / cover no-repeat;
   padding: 68px 0 74px;
 }
 
@@ -2930,7 +2934,9 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(180deg, #e7e7e7 0%, #dcdcdc 100%);
+  background:
+    linear-gradient(90deg, rgba(10, 18, 28, 0.72), rgba(10, 18, 28, 0.38)),
+    url("assets/images/volunteers.jpg") center 45% / cover no-repeat;
   padding: 24px;
 }
 
@@ -2976,6 +2982,31 @@ footer {
 
 .get-types-section {
   padding: 10px 0 72px;
+}
+
+.get-media-section {
+  padding: 0 0 78px;
+}
+
+.get-media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.get-media-photo,
+.donate-story-photo {
+  min-height: 240px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.get-media-photo img,
+.donate-story-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .get-types-header {
@@ -3209,7 +3240,9 @@ footer {
 }
 
 .donate-hero {
-  background: #146ee4;
+  background:
+    linear-gradient(90deg, rgba(20, 110, 228, 0.92), rgba(20, 110, 228, 0.58)),
+    url("assets/images/reading-class.jpg") center 44% / cover no-repeat;
   padding: 72px 0 78px;
 }
 
@@ -3250,6 +3283,25 @@ footer {
 
 .donate-why-section {
   padding: 86px 0 62px;
+}
+
+.donate-story-gallery {
+  padding: 0 0 74px;
+}
+
+.donate-story-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+}
+
+.donate-story-photo-large {
+  min-height: 340px;
+}
+
+.donate-story-stack {
+  display: grid;
+  gap: 18px;
 }
 
 .donate-why-copy {
@@ -3795,6 +3847,7 @@ footer {
   }
 
   .get-types-grid,
+  .get-media-grid,
   .page-get-involved .footer-inner {
     grid-template-columns: 1fr;
   }
@@ -3825,6 +3878,7 @@ footer {
   }
 
   .donate-options-grid,
+  .donate-story-grid,
   .donate-impact-stats,
   .donate-testimonials-grid,
   .page-donate .footer-inner {
