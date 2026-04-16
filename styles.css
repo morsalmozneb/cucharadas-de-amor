@@ -1687,6 +1687,7 @@ footer {
   border-radius: 12px;
   background: #e6e6e6;
   border: 2px dashed #cfcfcf;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1993,6 +1994,7 @@ footer {
   background: #e8e8e8;
   border: 2px dashed #d0d0d0;
   border-radius: 0;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2195,6 +2197,7 @@ footer {
 .about-community-photo {
   background: #e6e6e6;
   border: 2px dashed #cfcfcf;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2637,6 +2640,7 @@ footer {
   min-height: 176px;
   background: #e6e6e6;
   border: 2px dashed #cfcfcf;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
